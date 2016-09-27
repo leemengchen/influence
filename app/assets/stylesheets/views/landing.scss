@@ -12,37 +12,30 @@
  display: flex;
  align-items: center;
  justify-content: center;
+ font-size: 50px;
+ font-weight: bold;
+ text-shadow: white;
  }
 
- .image_box:hover .invisible-layout {
-       opacity: 1;
-       transition: all 0.5s ease-in-out;
-     }
+ .button-child {
+   position: absolute;
+   padding-top: 100px;
 
-     .invisible-layout {
-       position: absolute;
-       top: 0;
-       left: 0;
-       right: 0;
-       height: 100%;
-       width: 100%;
-       opacity: 0;
-     }
+  //  justify-content: center;
+ }
 
-     .img-content {
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       height: 100%;
-       background-color: white;
-       opacity: 0.5;
-     }
+ .btn-info {
+   background-color: transparent;
+   font-size: 30px;
+   margin-left: 10px;
+   margin-right: 10px;
 
-     .typer {
-       font-size: 45px;
-       position: absolute;
-       top: 125px;
-       left: 215px;
-     }
+ }
+
+ .btn-info:hover{
+   background-color: #fff;
+   opacity: 1;
+   color: black;
+ }
 
 }
