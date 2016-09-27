@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  avatar: MyString
+  companyId: 1
+  companyName: MyString
+  requirements: MyText
+  skills: MyText
+  due: MyString
+  viewCount: 1
+
+two:
+  title: MyString
+  description: MyString
+  avatar: MyString
+  companyId: 1
+  companyName: MyString
+  requirements: MyText
+  skills: MyText
+  due: MyString
+  viewCount: 1

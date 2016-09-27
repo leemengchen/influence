@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @influencer.firstName %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @influencer.lastName %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @influencer.email %>
+</p>
+
+<p>
+  <strong>Igusername:</strong>
+  <%= @influencer.igUsername %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @influencer.gender %>
+</p>
+
+<%= link_to 'Edit', edit_influencer_path(@influencer) %> |
+<%= link_to 'Back', influencers_path %>

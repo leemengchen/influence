@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @marketer.name %>
+</p>
+
+<p>
+  <strong>Companyname:</strong>
+  <%= @marketer.companyName %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @marketer.email %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @marketer.budget %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @marketer.message %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @marketer.country %>
+</p>
+
+<%= link_to 'Edit', edit_marketer_path(@marketer) %> |
+<%= link_to 'Back', marketers_path %>
