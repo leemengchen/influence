@@ -1,0 +1,41 @@
+// Place all the styles related to the landing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.landing {
+  .background{
+ background-image: asset-url("image.jpg");
+ height: calc(100vh - 52px);
+ width: 100%;
+ background-position: 50% 50%;
+ background-repeat: no-repeat;
+ background-size: cover;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 50px;
+ font-weight: bold;
+ text-shadow: white;
+ }
+
+ .button-child {
+   position: absolute;
+   padding-top: 100px;
+
+  //  justify-content: center;
+ }
+
+ .btn-info {
+   background-color: transparent;
+   font-size: 30px;
+   margin-left: 10px;
+   margin-right: 10px;
+
+ }
+
+ .btn-info:hover{
+   background-color: #fff;
+   opacity: 1;
+   color: black;
+ }
+
+}
