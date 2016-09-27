@@ -1,0 +1,15 @@
+#header {
+  height: 52px;
+  z-index: 1;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  font-size: 39px;
+}
