@@ -7,8 +7,9 @@
        <span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span>
     </p>
     <div class="button-child">
-      <button type="button" class="btn btn-info">Influencers</button>
-      <button type="button" class="btn btn-info">Marketers</button>
+      <%= link_to "Influencers", new_influencer_registration_path, method: :get, class: "btn btn-info" %>
+      <%= link_to "Marketers", new_marketer_registration_path, method: :get, class: "btn btn-info" %>
+
     </div>
 
     </div>
