@@ -1,4 +1,51 @@
-<p id="notice"><%= notice %></p>
+<div class="jobs">
+
+  <div class="job-header text-center">
+    <h1> Job Posting Wall </h1>
+  </div>
+
+  <div class="job-big-container">
+    <% if @jobs.any? %>
+
+    <% @jobs.each do |job| %>
+
+      <div class="job-post-container">
+        <div class="job-post-child">
+          <div class="background">
+            <div class="background-image">
+              <div class="job-title">
+                <h3><%= job.title %></h3>
+              </div>
+              <div class="industry-tag">
+                <h5> <%= job.industry %> </h5>
+              </div>
+              <div class="company-avatar">
+                <%= image_tag job.marketer.avatar %>
+              </div>
+              <div class="company-name">
+                <%= job.companyName %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+
+
+    <% else %>
+      <div class="nothing text-center">
+      <h3> Job posting wall is empthy right now! </h3>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>
+
+
+
+<!-- <p id="notice"><%= notice %></p>
 
 <h1>Jobs</h1>
 
@@ -40,4 +87,4 @@
 
 <br>
 
-<%= link_to 'New Job', new_job_path %>
+<%= link_to 'New Job', new_job_path %> -->

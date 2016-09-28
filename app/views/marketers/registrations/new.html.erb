@@ -1,59 +1,68 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+<div class="marketers">
+  <div class="marketers-sign-up text-center">
+    <h2>Marketers Sign Up Page</h2>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+  <div class="marketers-sign-up-form">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
 
-  <div class="field">
-    <%= f.label :companyName %>
-    <%= f.text_field :companyName %>
-  </div>
+    <div class="form-group">
+      <%= f.label :companyName %>
+      <%= f.text_field :companyName, class: 'form-control' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
 
-  <div class="field">
-    <%= f.label :budget %>
-    <%= f.text_field :budget %>
-  </div>
+    <div class="form-group">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :message %>
-    <%= f.text_field :message %>
-  </div>
+    <div class="form-group">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :country %>
-    <%= f.text_field :country %>
-  </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+
+    <div class="form-group">
+      <%= f.label :budget %>
+      <div class="input-container">
+        <%= f.text_field :budget, class: 'budget-box' %>
+        <p class="currency-symbol">$</p>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <%= f.label :country %>
+      <%= f.country_select :country,priority_countries: ["MY","SG"] , class: 'form-control'%>
+
+    </div>
+
+
+
+
+    <div class="actions">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
+
   </div>
-<% end %>
 
 <%= render "marketers/shared/links" %>
+
+</div>

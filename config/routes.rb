@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :marketers
   devise_for :influencers
+  resources :jobs
   root to: "landing#index"
 
 
