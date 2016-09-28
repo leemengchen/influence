@@ -1,19 +1,16 @@
 <div class="landing">
-  <div class="background">
-
-    <p>
-       <span class="typer" id="some-id" data-delay="100" data-delim=":" data-words="Platform for marketers and influencers."
-       data-colors="black"></span>
-       <span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span>
-    </p>
-    <div class="button-child">
-      <%= link_to "Influencers", new_influencer_registration_path, method: :get, class: "btn btn-info" %>
-      <%= link_to "Marketers", new_marketer_registration_path, method: :get, class: "btn btn-info" %>
-
+    <div class="background">
+        <p>
+            <span class="typer" id="some-id" data-delay="100" data-delim=":" data-words="Platform for marketers and influencers." data-colors="black"></span>
+            <span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span>
+        </p>
+        <div class="button-child">
+            <%= link_to "Influencers", new_influencer_registration_path, method: :get, class: "btn btn-info" %>
+            <%= link_to "Marketers", new_marketer_registration_path, method: :get, class: "btn btn-info" %>
+        </div>
     </div>
 
-    </div>
-
-
+    <!-- Login modal -->
+    <%= render partial: 'partials/login' %>
 
 </div>
