@@ -1,0 +1,28 @@
+
+
+.fb-profile {
+  background-image: asset-url("troll.jpg");
+  height: calc(60vh - 52px);
+  width: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  align-items: center;
+  // padding-left: 120px;
+  // position: absolute;
+}
+
+.job-title {
+  text-align: center;
+
+  // padding-left: 80px;
+  padding-top: 180px;
+  font-size: 30px;
+}
+
+.industry-title {
+  text-align: center;
+  font-size: 20px;
+  // padding-right: 50px;
+
+
+}
