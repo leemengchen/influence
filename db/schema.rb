@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927065738) do
+ActiveRecord::Schema.define(version: 20160928043343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160927065738) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "image"
     t.index ["email"], name: "index_influencers_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_influencers_on_reset_password_token", unique: true, using: :btree
   end
@@ -39,15 +40,17 @@ ActiveRecord::Schema.define(version: 20160927065738) do
   create_table "jobs", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
-    t.string   "avatar"
     t.integer  "companyId"
     t.string   "companyName"
     t.text     "requirements"
     t.text     "skills"
     t.string   "due"
     t.integer  "viewCount"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "background_image"
+    t.integer  "marketer_id"
+    t.string   "industry"
   end
 
   create_table "marketers", force: :cascade do |t|
@@ -68,6 +71,7 @@ ActiveRecord::Schema.define(version: 20160927065738) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "avatar"
     t.index ["email"], name: "index_marketers_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_marketers_on_reset_password_token", unique: true, using: :btree
   end

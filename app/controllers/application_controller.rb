@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+
   before_action :configure_permitted_parameters, if: :devise_controller?
 
    protected
@@ -23,5 +24,6 @@ class ApplicationController < ActionController::Base
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:influencer]
   end
+
 
 end
