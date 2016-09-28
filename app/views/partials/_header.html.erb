@@ -19,6 +19,7 @@
                 <li><%= link_to current_influencer.email, edit_influencer_registration_path(current_influencer), class: 'white shadowed link-styling' %></li>
                 <li><%= link_to "Logout", destroy_influencer_session_path, method: :delete, class: 'white shadowed link-styling' %></li>
                 <% else %>
+                <!-- <li><%= link_to "Log In", influencer_session_path %></li> -->
                 <li><a href="#" data-toggle="modal" data-target="#login-modal">Log In<span class="sr-only">(current)</span></a></li>
                 <% end %>
             </ul>
