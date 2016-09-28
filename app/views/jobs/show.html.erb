@@ -1,9 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
+
+<div class="container">
+    <div class="fb-profile">
+
+            <div class="job-title">
+              <p>
+                <strong>Title:</strong>
+                <%= @job.title %>
+              </p>
+
+               <div class="industry-title">
+                 <p> Industry Type <p>
+               </div>
+            </div>
+    </div>
+</div>
+
+
 
 <p>
   <strong>Description:</strong>
@@ -13,11 +27,6 @@
 <p>
   <strong>Avatar:</strong>
   <%= @job.avatar %>
-</p>
-
-<p>
-  <strong>Companyid:</strong>
-  <%= @job.companyId %>
 </p>
 
 <p>
@@ -35,15 +44,7 @@
   <%= @job.skills %>
 </p>
 
-<p>
-  <strong>Due:</strong>
-  <%= @job.due %>
-</p>
 
-<p>
-  <strong>Viewcount:</strong>
-  <%= @job.viewCount %>
-</p>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>
