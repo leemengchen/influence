@@ -16,11 +16,15 @@
               <li><a href="#">About<span class="sr-only">(current)</span></a></li>
 
                 <% if current_influencer %>
-                <li><%= link_to current_influencer.email, edit_influencer_registration_path(current_influencer), class: 'white shadowed link-styling' %></li>
-                <li><%= link_to "Logout", destroy_influencer_session_path, method: :delete, class: 'white shadowed link-styling' %></li>
+                  <li><%= link_to current_influencer.email, edit_influencer_registration_path(current_influencer), class: 'white shadowed link-styling' %></li>
+                  <li><%= link_to "Logout", destroy_influencer_session_path, method: :delete, class: 'white shadowed link-styling' %></li>
+                <% elsif current_marketer %>
+                  <li><%= link_to current_marketer.email, edit_marketer_registration_path(current_marketer), class: 'white shadowed link-styling' %></li>
+                  <li><%= link_to "Logout", destroy_marketer_session_path, method: :delete, class: 'white shadowed link-styling' %></li>
                 <% else %>
                 <!-- <li><%= link_to "Log In", influencer_session_path %></li> -->
-                <li><a href="#" data-toggle="modal" data-target="#login-modal">Log In<span class="sr-only">(current)</span></a></li>
+                  <li><a href="#" data-toggle="modal" data-target="#login-modal-influencer">Log In (Influencer)<span class="sr-only">(current)</span></a></li>
+                  <li><a href="#" data-toggle="modal" data-target="#login-modal-marketer">Log In (Marketer)<span class="sr-only">(current)</span></a></li>
                 <% end %>
             </ul>
         </div>
