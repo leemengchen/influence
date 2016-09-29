@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20160928043343) do
     t.integer  "viewCount"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "image"
     t.string   "background_image"
     t.integer  "marketer_id"
     t.string   "industry"
