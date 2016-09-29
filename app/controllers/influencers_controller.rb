@@ -4,6 +4,6 @@ class InfluencersController < ApplicationController
   end
 
   def show
-    @influencers = Influencers.find_by(params[:id])
+    @influencers = Influencer.find_by(params[:id])
   end
 end

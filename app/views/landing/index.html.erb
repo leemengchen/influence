@@ -11,10 +11,10 @@
               <button type="button" data-toggle="modal" data-target="#login-modal-influencer" class="btn btn-info">Influencers</button>
             <% end %>
 
-            <% if current_influencer %>
-              <%= link_to "Marketers", new_marketer_registration_path, method: :get, class: "btn btn-info" %>
+            <% if current_marketer %>
+              <%= link_to "Marketers", marketers_path, method: :get, class: "btn btn-info" %>
             <% else %>
-                <button type="button" data-toggle="modal" data-target="#login-modal-marketer" class="btn btn-info">Imarketers</button>
+                <button type="button" data-toggle="modal" data-target="#login-modal-marketer" class="btn btn-info">Marketers</button>
             <% end %>
         </div>
     </div>
