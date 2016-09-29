@@ -6,7 +6,7 @@
         </p>
         <div class="button-child">
             <% if current_influencer %>
-              <%= link_to "Influencers", influencers_path, method: :get, class: "btn btn-info" %>
+              <%= link_to "Influencers", jobs_path, method: :get, class: "btn btn-info" %>
             <% else %>
               <button type="button" data-toggle="modal" data-target="#login-modal-influencer" class="btn btn-info">Influencers</button>
             <% end %>
