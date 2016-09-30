@@ -13,6 +13,18 @@ class ApplicationController < ActionController::Base
   end
   helper_method :resource
 
+  def new
+      @resource ||= Influencer.new
+
+    if @influencer.save
+        flash[:success] = "You will receive a confirmation email once we reviewed your profile"
+        redirect_to root_path
+      else
+        flash[:danger] = "User not successfully added"
+        redirect_to new_influencer_registration_path
+      end
+  end
+
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:influencer]
   end
@@ -37,5 +49,5 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:igUsername, :firstName, :lastName])
   end
-  
+
 end
