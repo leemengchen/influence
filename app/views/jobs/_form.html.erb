@@ -1,71 +1,81 @@
-<%= form_for(job) do |f| %>
-  <% if job.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
-
-      <ul>
-      <% job.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+<div class="job ">
+  <div class="jobs-new text-center">
   </div>
 
 
-  <div class="form-group">
-  <h4 class="text-center"> Post Your Background Image Here </h4>
-  <div id="preview-image">
-    <% if @job.background_image? %>
-      <%= image_tag @job.background_image, class: "img-settings img-responsive center-block" %>
+  <div class="jobs-form">
+  <%= form_for(job) do |f| %>
+    <% if job.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+        <ul>
+        <% job.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
     <% end %>
-  </div>
-</div>
 
-<div class="form-group">
-<%= f.file_field :background_image, id: "job_background_image_field", class: 'form-control image-uploader' %>
-</div>
 
-  <div class="field">
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'form-control' %>
+    </div>
+
+
+    <div class="form-group">
+     <p> Post Your Background Image Here </p>
+    <div id="preview-image">
+      <% if @job.background_image? %>
+        <%= image_tag @job.background_image, class: "img-settings img-responsive center-block" %>
+      <% end %>
+    </div>
+    </div>
+
+    <div class="form-group">
+    <%= f.file_field :background_image, id: "job_background_image_field", class: 'form-control image-uploader', class: 'form-control' %>
+    </div>
+
+  <!-- <div class="form-group">
     <%= f.label :companyId %>
-    <%= f.number_field :companyId %>
-  </div>
+    <%= f.number_field :companyId, class: 'form-control' %>
+  </div> -->
 
-  <div class="field">
-    <%= f.label :companyName %>
-    <%= f.text_field :companyName %>
-  </div>
+    <div class="form-group">
+      <%= f.label :companyName %>
+      <%= f.text_field :companyName, class: 'form-control' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :requirements %>
-    <%= f.text_area :requirements %>
-  </div>
+    <div class="form-group">
+      <%= f.label :requirements %>
+      <%= f.text_area :requirements, class: 'form-control' %>
+    </div>
 
-  <div class="field">
-    <%= f.label :skills %>
-    <%= f.text_area :skills %>
-  </div>
+    <div class="form-group">
+      <%= f.label :skills %>
+      <%= f.text_area :skills, class: 'form-control' %>
+    </div>
 
-  <div class="field">
+  <!-- <div class="form-group">
     <%= f.label :due %>
-    <%= f.text_field :due %>
-  </div>
+    <%= f.text_field :due, class: 'form-control' %>
+  </div> -->
 
-  <div class="field">
+  <!-- <div class="form-group">
     <%= f.label :viewCount %>
-    <%= f.number_field :viewCount %>
-  </div>
+    <%= f.number_field :viewCount, class: 'form-control' %>
+  </div> -->
 
-  <div class="actions">
-    <%= f.submit %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    <% end %>
+
   </div>
-<% end %>
+</div>

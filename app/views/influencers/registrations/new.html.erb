@@ -37,7 +37,10 @@
 
     <div class="form-group">
       <%= f.label :igUsername %>
-      <%= f.text_field :igUsername, class:'form-control' %>
+      <div class="input-group">
+       <span class="input-group-addon" id="basic-addon1">@</span>
+       <%= f.text_field :igUsername, class:'form-control' %>
+      </div>
     </div>
 
     <div class="actions">
@@ -47,6 +50,8 @@
 
   </div>
 
-<%= render "influencers/shared/links" %>
+
+
+<%= link_to "Sign in with Instagram", influencer_instagram_omniauth_authorize_path %>
 
 </div>

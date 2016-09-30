@@ -41,8 +41,11 @@
     <div class="form-group">
       <%= f.label :budget %>
       <div class="input-container">
-        <%= f.text_field :budget, class: 'budget-box' %>
-        <p class="currency-symbol">$</p>
+        <div class="input-group">
+         <span class="input-group-addon">$</span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-addon">.00</span>
+        </div>
       </div>
     </div>
 
