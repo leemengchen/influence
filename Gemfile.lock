@@ -46,6 +46,7 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.2)
+    byebug (9.0.5)
     carrierwave (1.0.0.beta)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -229,6 +230,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  byebug
   carrierwave (>= 1.0.0.beta, < 2.0)
   coffee-rails (~> 4.2)
   country_select
