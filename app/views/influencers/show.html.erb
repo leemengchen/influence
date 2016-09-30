@@ -1,3 +1,38 @@
+<!-- <div class="influencer-profile">
+  <div class="influencer-username">
+    	<h1> <%=@influencer.igUsername %> </h1>
+  </div>
+</div> -->
+
+<h1>Instagram Lookup</h1>
+  <% @popular.each do |popular| %>
+  <div class="col-sm-12 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag popular.images.low_resolution.url %>
+      <div class="caption">
+        <%= popular.user.username %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -26,4 +61,4 @@
 </p>
 
 <%= link_to 'Edit', edit_influencer_path(@influencer) %> |
-<%= link_to 'Back', influencers_path %>
+<%= link_to 'Back', influencers_path %> -->

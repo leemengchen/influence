@@ -4,6 +4,11 @@ class InfluencersController < ApplicationController
   end
 
   def show
-    @influencers = Influencers.find_by(params[:id])
+
+    @influencer = Influencer.find_by(id:params[:id])
+    binding.pry
+    @popular = Instagram.media_popular
+    # @influncer = Influncer.update_attributes(igUsername:)
+
   end
 end
