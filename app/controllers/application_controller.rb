@@ -24,4 +24,5 @@ class ApplicationController < ActionController::Base
     @devise_mapping ||= Devise.mappings[:influencer]
   end
 
+
 end
