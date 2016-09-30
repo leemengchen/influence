@@ -38,6 +38,7 @@ gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem "mini_magick"
 gem 'country_select'
 gem 'instagram'
+gem 'omniauth-instagram'
 
 group :development, :test do
   gem 'pry'
