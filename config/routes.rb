@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :influencers
   resources :jobs
   resources :influencers
+  resources :marketers
   root to: "landing#index"
 
 
