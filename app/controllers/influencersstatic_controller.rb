@@ -1,4 +1,4 @@
-class InfluencersController < ApplicationController
+class InfluencersstaticController < ApplicationController
 
   def index
   end

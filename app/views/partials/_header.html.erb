@@ -11,6 +11,11 @@
         </div>
 
         <div class="collapse navbar-collapse" id="header-dropdown">
+            <ul class="nav navbar-nav navbar-left">
+              <% if current_marketer %>
+              <li><%= link_to "Post A Job", new_job_path, method: :get,class: 'white shadowed link-styling' %></li>
+              <% end %>
+            </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Home", root_path, class: 'white shadowed link-styling' %></li>
               <li><a href="#">About<span class="sr-only">(current)</span></a></li>
@@ -22,7 +27,7 @@
                   <li><%= link_to current_marketer.email, edit_marketer_registration_path(current_marketer), class: 'white shadowed link-styling' %></li>
                   <li><%= link_to "Logout", destroy_marketer_session_path, method: :delete, class: 'white shadowed link-styling' %></li>
                 <% else %>
-                <!-- <li><%= link_to "Log In", influencer_session_path %></li> -->
+                  <li><a href="#" data-toggle="modal" data-target="#sign-up-modal">Sign Up<span class="sr-only">(current)</span></a></li>
                   <li><a href="#" data-toggle="modal" data-target="#login-modal-influencer">Influencer<span class="sr-only">(current)</span></a></li>
                   <li><a href="#" data-toggle="modal" data-target="#login-modal-marketer">Marketer<span class="sr-only">(current)</span></a></li>
                 <% end %>

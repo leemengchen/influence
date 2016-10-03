@@ -25,7 +25,13 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @job = Job.new(job_params)
+    # @job = Job.new(job_params)
+
+    @job = current_marketer.jobs.create(job_params)
+
+    # @work = current_user.works.create(params[:work])
+    # @post = current_user.posts.build(post_params.merge(topic_id: @topic.id))
+
 
     respond_to do |format|
       if @job.save
@@ -63,6 +69,15 @@ class JobsController < ApplicationController
   end
 
   private
+
+    #why when i put this line , current marketer will automatically sign out
+    # def current_marketer
+    #   return unless session[:id]
+    #   @current_marketer ||= Marketer.find_by(session[:id])
+    #
+    # end
+    # helper_method :current_marketer
+
     # Use callbacks to share common setup or constraints between actions.
     def set_job
       @job = Job.find(params[:id])

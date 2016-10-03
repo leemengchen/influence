@@ -36,9 +36,21 @@ class ApplicationController < ActionController::Base
   helper_method :marketer_resource_name
 
   def marketer_resource
-    @resource ||= Marketer.new
+    @marketer_resource ||= Marketer.new
   end
   helper_method :marketer_resource
+
+  def marketer_new
+      @marketer_resource ||= Marketer.new
+
+    if @marketer.save
+        flash[:success] = "WAU"
+        redirect_to root_path
+      else
+        flash[:danger] = "User not successfully added"
+        redirect_to root_path
+      end
+  end
 
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:marketer]
@@ -47,7 +59,9 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:igUsername, :firstName, :lastName])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:igUsername, :firstName, :lastName, :companyName, :name, :budget, :country])
   end
+
+  
 
 end
