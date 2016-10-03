@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
   resources :jobs
-  # resources :influencers, only: [:index :show]
-  resources :marketers
+  resources :influencersstatic, only: [:index, :show]
+  resources :marketersstatic, only: [:index, :show]
   root to: "landing#index"
-  devise_for :marketers
+  devise_for :marketers, controllers:
+  {
+    sessions: 'marketers/sessions',
+    registrations: 'marketers/registrations',
+    passwords: 'marketers/passwords'
+  }
   devise_for :influencers, controllers:
   {
     sessions: 'influencers/sessions',
