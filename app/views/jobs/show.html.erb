@@ -17,18 +17,9 @@
                     Posted on August 24, 2014 at 9:00 PM</p>
                 <p>
                     <i class="fa fa-tags"></i>
-                    Tags:
+                    Industry:
                     <a href="">
-                        <span class="badge badge-info"><%= raw @job.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></span>
-                    </a>
-                    <a href="">
-                        <span class="badge badge-info">Car</span>
-                    </a>
-                    <a href="">
-                        <span class="badge badge-info">Sharing Economy</span>
-                    </a>
-                    <a href="">
-                        <span class="badge badge-info">Startup</span>
+                        <span class="badge badge-info">Transportation</span>
                     </a>
                 </p>
 
@@ -90,29 +81,14 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li>
-                                    <a href="">
-                                        <span class="badge badge-info">Coding</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="badge badge-info">Singing</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="badge badge-info">Video Gedik</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span class="badge badge-info">Beauty Face</span>
-                                    </a>
-                                </li>
+                              <% @job.tag_list.each do |tag| %>
+                              <li>
+                                <%= link_to tag, tag_path(tag), class: "badge badge-info" %>
+                              </li>
+                              <% end %>
                             </ul>
                         </div>
-                        <div class="col-lg-6">
+                        <!-- <div class="col-lg-6">
                             <ul class="list-unstyled">
                                 <li>
                                     <a href="">
@@ -135,7 +111,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- /well -->
