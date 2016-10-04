@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'tags/:tag', to: 'jobs#index', as: :tag
   resources :jobs
   resources :influencersstatic, only: [:index, :show]
   resources :marketersstatic, only: [:index, :show]

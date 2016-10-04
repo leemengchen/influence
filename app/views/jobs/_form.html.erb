@@ -78,6 +78,11 @@
     </div>
 
     <div class="form-group">
+      <%= f.label :tag_list, "Tags (Separate by commas)" %>
+      <%= f.text_field :tag_list, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
       <%= f.label :skills %>
       <%= f.text_area :skills, class: 'form-control' %>
     </div>
