@@ -5,11 +5,11 @@ class JobsController < ApplicationController
   # GET /jobs.json
   def index
     if params[:tag]
-    @jobs = Job.tagged_with(params[:tag])
-  else
-    @jobs = Job.all
-  end
-
+      @jobs = Job.tagged_with(params[:tag])
+      @jobs = @jobs.all.order('id ASC')
+    else
+      @jobs = Job.all.order('id ASC')
+    end
   end
 
   # GET /jobs/1
