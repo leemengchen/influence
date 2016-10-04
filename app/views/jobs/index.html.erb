@@ -15,7 +15,7 @@
         <% @jobs.each do |job| %>
         <div class="item  col-xs-4 col-lg-4">
             <div class="thumbnail">
-                <img class="group list-group-image" src=<%= job.image %> alt=""/>
+                <img class="group list-group-image" src=<%= job.background_image %> alt=""/>
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
                         <%= job.title %></h4>
@@ -23,8 +23,9 @@
                         <%= job.description %></p>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
-                            <p class="lead">
-                                RM21.000</p>
+                            <div class="lead">
+                              <%= job.budget %>
+                              </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <%= link_to "View Details", job_path(id: job.id), class: 'btn btn-success'%>
