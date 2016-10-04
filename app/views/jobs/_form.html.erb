@@ -39,7 +39,10 @@
     </div>
 
     <div class="form-group">
-    <%= f.file_field :background_image, id: "job_background_image_field", class: 'form-control image-uploader', class: 'form-control' %>
+    <%= f.file_field :background_image, id: "job_background_image_field", class: 'form-control image-uploader' %>
+    </div>
+    <div id='preview-image'>
+
     </div>
 
   <!-- <div class="form-group">
@@ -47,9 +50,26 @@
     <%= f.number_field :companyId, class: 'form-control' %>
   </div> -->
 
-    <div class="form-group">
+    <!-- <div class="form-group">
       <%= f.label :companyName %>
       <%= f.text_field :companyName, class: 'form-control' %>
+    </div> -->
+
+    <div class="form-group">
+      <%= f.label :budget %>
+      <div class="input-container">
+        <div class="input-group">
+         <span class="input-group-addon">$</span>
+          <%= f.text_field :budget, class: 'form-control' %>
+          <span class="input-group-addon">.00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :industry %>
+      <!-- <%= f.label :industry %> -->
+      <%= f.select :industry, ['Travel', 'Food', 'Fashion', 'Cosmetics'], class: 'form-control' %>
     </div>
 
     <div class="form-group">
