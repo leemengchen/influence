@@ -119,25 +119,12 @@
                     <h4>
                         <i class="fa fa-fire"></i>
                         Requirements</h4>
-                    <ul>
-                        <li>
-                            <p>Marketing Job #1 requirement</p>
-                        </li>
-                        <li>
-                            <p>Marketing Job #2 requirement</p>
-                        </li>
-                        <li>
-                            <p>Marketing Job #3 requirement</p>
-                        </li>
-                        <li>
-                            <p>Marketing Job #4 requirement</p>
-                        </li>
-                        <li>
-                            <p>Marketing Job #5 requirement</p>
-                        </li>
-                        <li>
-                            <p>Marketing Job #6 requirement</p>
-                        </li>
+                    <ul id="nameid" >
+                      <script type="text/javascript">
+                            var mystring = '<%= @job.requirements %>';
+                            mystring = '<li>' + mystring.replace(/##/gi,'</li><li>') + '</li>';
+                            $('#nameid').html(mystring);
+                      </script>
                     </ul>
                 </div>
                 <!-- /well -->
