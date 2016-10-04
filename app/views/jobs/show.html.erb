@@ -19,7 +19,7 @@
                     <i class="fa fa-tags"></i>
                     Tags:
                     <a href="">
-                        <span class="badge badge-info">Transportation</span>
+                        <span class="badge badge-info"><%= raw @job.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></span>
                     </a>
                     <a href="">
                         <span class="badge badge-info">Car</span>
