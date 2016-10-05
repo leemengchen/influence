@@ -1,0 +1,22 @@
+<div class="influencersstatic">
+  <div class="influencers-page">
+    <div class="influencers-page-head text-center">
+      <h1> List of Influencers with Us </h1>
+    </div>
+
+    <div class="row">
+        <% @influencer.each do |influencer| %>
+          <div class="col-md-4">
+            <div class="influencer-igname text-center">
+              <h3> <%= influencer.nickname %> </h3>
+            </div>
+            <div class="influencer-profile-picture">
+              <%= link_to influencersstatic_path(influencer), class: 'mc-hover' do %>
+              <%= image_tag influencer.try(:profile_picture), class:"img-circle img-responsive center-block mc-hover" %>
+              <% end %>
+            </div>
+          </div>
+          <% end %>
+    </div>
+  </div>
+</div>

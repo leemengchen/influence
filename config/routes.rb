@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
+
   get :about, to: 'static_pages#about'
   get :terms, to: 'static_pages#terms'
   get :privacy, to: 'static_pages#privacy'
   get 'tags/:tag', to: 'jobs#index', as: :tag
+
   resources :jobs
   resources :influencersstatic, only: [:index, :show]
   resources :marketersstatic, only: [:index, :show]
   root to: "landing#index"
-  devise_for :marketers, controllers: 
+  devise_for :marketers, controllers:
   {
     sessions: 'marketers/sessions',
     registrations: 'marketers/registrations',
@@ -21,6 +23,7 @@ Rails.application.routes.draw do
     passwords: 'influencers/passwords',
     omniauth_callbacks: 'influencers/omniauth_callbacks'
   }
+
 
   devise_scope :influencer do
   delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session

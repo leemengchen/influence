@@ -1,0 +1,47 @@
+<div class="individual-influencer">
+  <div class="individual-influencer-head text-center">
+    <h1> <%= @influencer.nickname %> </h1>
+    <br>
+    <h3> This is the influencer details </h3>
+  </div>
+
+  <div class="influencer-profile-picture">
+    <%= image_tag @influencer.try(:profile_picture), class:"img-circle img-responsive center-block" %>
+  </div>
+
+  <div class="followers-column">
+    <div class="row">
+      <div class="col-xs-6">
+        <h2> Followers Number </h2>
+      </div>
+      <div class="col-xs-6">
+        <h2> <%= @influencer.followers %> </h2>
+      </div>
+    </div>
+  </div>
+
+    <div class="following-column">
+      <div class="row">
+        <div class="col-xs-6">
+          <h2> Number of influencer following </h2>
+        </div>
+        <div class="col-xs-6">
+          <h2> <%= @influencer.following %> </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="media-column">
+      <div class="row">
+        <div class="col-xs-6">
+          <h2> Numbers of photos or videos posted </h2>
+        </div>
+        <div class="col-xs-6">
+          <h2> <%= @influencer.media %> </h2>
+        </div>
+      </div>
+    </div>
+
+    <%= @influencer.recent_media %>
+
+</div>
