@@ -4,7 +4,12 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    if params[:tag]
+      @jobs = Job.tagged_with(params[:tag])
+      @jobs = @jobs.all.order('id ASC')
+    else
+      @jobs = Job.all.order('id ASC')
+    end
   end
 
   # GET /jobs/1
@@ -85,6 +90,8 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:title, :description, :background_image, :companyId, :companyName, :requirements, :skills, :due, :viewCount)
+
+      params.require(:job).permit(:title, :description, :background_image, :companyId, :companyName, :budget, :industry, :requirements, :skills, :due, :viewCount, :tag_list)
+
     end
 end

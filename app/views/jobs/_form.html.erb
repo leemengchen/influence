@@ -39,17 +39,25 @@
     </div>
 
     <div class="form-group">
-    <%= f.file_field :background_image, id: "job_background_image_field", class: 'form-control image-uploader', class: 'form-control' %>
+    <%= f.file_field :background_image, id: "job_background_image_field", class: 'form-control image-uploader' %>
+    </div>
+    <div id='preview-image'>
     </div>
 
-  <!-- <div class="form-group">
-    <%= f.label :companyId %>
-    <%= f.number_field :companyId, class: 'form-control' %>
-  </div> -->
+    <div class="form-group">
+      <%= f.label :budget %>
+      <div class="input-container">
+        <div class="input-group">
+         <span class="input-group-addon">$</span>
+          <%= f.text_field :budget, class: 'form-control' %>
+          <span class="input-group-addon">.00</span>
+        </div>
+      </div>
+    </div>
 
     <div class="form-group">
-      <%= f.label :companyName %>
-      <%= f.text_field :companyName, class: 'form-control' %>
+      <%= f.label :industry %>
+      <%= f.select :industry, ['Travel', 'Food', 'Fashion', 'Cosmetics'], class: 'form-control' %>
     </div>
 
     <div class="form-group">
@@ -58,19 +66,14 @@
     </div>
 
     <div class="form-group">
+      <%= f.label :tag_list, "Tags (Separate by commas)" %>
+      <%= f.text_field :tag_list, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
       <%= f.label :skills %>
       <%= f.text_area :skills, class: 'form-control' %>
     </div>
-
-  <!-- <div class="form-group">
-    <%= f.label :due %>
-    <%= f.text_field :due, class: 'form-control' %>
-  </div> -->
-
-  <!-- <div class="form-group">
-    <%= f.label :viewCount %>
-    <%= f.number_field :viewCount, class: 'form-control' %>
-  </div> -->
 
     <div class="actions">
       <%= f.submit %>

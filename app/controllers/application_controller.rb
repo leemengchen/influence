@@ -17,13 +17,23 @@ class ApplicationController < ActionController::Base
       @resource ||= Influencer.new
 
 
-    if @influencer.save
-        flash[:success] = "You will receive a confirmation email once we reviewed your profile"
-        redirect_to edit_influencer_registration_path
-      else
-        flash[:danger] = "User not successfully added"
-        redirect_to new_influencer_registration_path
-      end
+
+    # if @influencer.save
+    #     flash[:success] = "You will receive a confirmation email once we reviewed your profile"
+    #     redirect_to edit_influencer_registration_path
+    #   else
+    #     flash[:danger] = "User not successfully added"
+    #     redirect_to new_influencer_registration_path
+    #   end
+
+    #
+    # if @influencer.save
+    #     flash[:success] = "You will receive a confirmation email once we reviewed your profile"
+    #     redirect_to root_path
+    #   else
+    #     flash[:danger] = "User not successfully added"
+    #     redirect_to new_influencer_registration_path
+    #   end
   end
 
   def devise_mapping
