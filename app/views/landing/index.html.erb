@@ -12,7 +12,7 @@
             <% end %>
 
             <% if current_marketer || current_influencer%>
-              <%= link_to "Marketers", marketersstatic_index_path, method: :get, class: "btn btn-info" %>
+              <%= link_to "Marketers", influencersstatic_index_path, method: :get, class: "btn btn-info" %>
             <% else %>
                 <button type="button" data-toggle="modal" data-target="#login-modal-marketer" class="btn btn-info">Marketers</button>
             <% end %>

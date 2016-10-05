@@ -14,8 +14,8 @@ class Instagram
     access_token = influencer.access_token
     url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=#{access_token}"
     arguments = { headers: {'Content-Type' => 'application/json', 'Accept' => 'application/json'},
-                basic_auth: { access_token: influencer.access_token}
+                basic_auth: { access_token: influencer.access_token }
                 }
     HTTParty.get(url, arguments)
-  end           
+  end
 end
