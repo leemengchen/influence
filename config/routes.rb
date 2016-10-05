@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   resources :jobs
   resources :influencersstatic, only: [:index, :show]
   resources :marketersstatic, only: [:index, :show]
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
     passwords: 'influencers/passwords',
     omniauth_callbacks: 'influencers/omniauth_callbacks'
   }
+
 
   devise_scope :influencer do
   delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session

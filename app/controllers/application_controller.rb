@@ -16,9 +16,10 @@ class ApplicationController < ActionController::Base
   def new
       @resource ||= Influencer.new
 
+
     if @influencer.save
         flash[:success] = "You will receive a confirmation email once we reviewed your profile"
-        redirect_to root_path
+        redirect_to edit_influencer_registration_path
       else
         flash[:danger] = "User not successfully added"
         redirect_to new_influencer_registration_path
@@ -62,6 +63,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:igUsername, :firstName, :lastName, :companyName, :name, :budget, :country])
   end
 
-  
+
 
 end

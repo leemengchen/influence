@@ -4,7 +4,17 @@ class Influencers::OmniauthCallbacksController < Devise::OmniauthCallbacksContro
     @influencer = Influencer.from_omniauth(request.env["omniauth.auth"])
 
     if @influencer.persisted?
-      sign_in_and_redirect @influencer, :event => :authentication #this will throw if @user is not activated
+      # sign_in_and_redirect edit_influencer_registration_url #this will throw if @user is not activated
+      sign_in @influencer
+      redirect_to edit_influencer_registration_url
+      @ig_user = Instagram.basic_information(@influencer)
+      @ig_media = Instagram.recent_media(@influencer)
+      @influencer.update_attributes(followers: @ig_user.parsed_response['data']['counts']['followed_by'],
+                                    following: @ig_user.parsed_response['data']['counts']['follows'],
+                                    media: @ig_user.parsed_response['data']['counts']['media']
+
+                                    # recent_images: @ig_media.parsed_response['data']['images']
+                                    )
       set_flash_message(:notice, :success, :kind => "instagram") if is_navigational_format?
     else
       session["devise.instagram_data"] = request.env["omniauth.auth"]
