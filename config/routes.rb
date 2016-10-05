@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+  get :about, to: 'static_pages#about'
+  get :terms, to: 'static_pages#terms'
+  get :privacy, to: 'static_pages#privacy'
   get 'tags/:tag', to: 'jobs#index', as: :tag
   resources :jobs
   resources :influencersstatic, only: [:index, :show]
   resources :marketersstatic, only: [:index, :show]
   root to: "landing#index"
-  devise_for :marketers, controllers:
+  devise_for :marketers, controllers: 
   {
     sessions: 'marketers/sessions',
     registrations: 'marketers/registrations',

@@ -1,0 +1,85 @@
+.background-about {
+  background-image: asset-url("influence-about.jpg");
+  height: calc(120vh - 52px) ;
+  width: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.9;
+  padding-top: 500px;
+
+
+.background-aboutme-img {
+  // background-image: asset-url("me.jpg");
+  // height: calc(30vh - 52px) ;
+  width: 200px;
+  padding-bottom: 20px;
+  // background-position: 50% 50%;
+  align-items: flex-start;
+  // justify-content: left;
+  // float:left;
+  border-radius: 15px 50px 30px;
+}
+
+// .background-icon-tevan {
+//   display:block;
+// }
+
+.all-content-group {
+  flex: 0 0 auto;
+  display: -webkit-inline-box;
+}
+
+// ul li{
+//   display: inline;
+// }
+
+h1 {
+  color:white;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+h2 {
+  color:white;
+  font-size: 20px;
+  justify-content:center;
+  font-family: monospace;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.short-underline {
+  width: 50px;
+  border-bottom: 1px solid black;
+}
+
+.content-about {
+  max-width: 60%;
+  padding-left: 20px;
+}
+
+.background-icon {
+  // align-items: center;
+  // justify-content: center;
+  display:flex;
+  padding-top: 30px;
+  margin: auto;
+  max-width: 1200px;
+  position: relative;
+}
+
+.icon {
+  flex:0 0 280px;
+  margin: 20px 25px;
+  padding-bottom: 20px;
+  display:inline;
+}
+
+.just-content {
+  padding-top: 20px;
+}
+}

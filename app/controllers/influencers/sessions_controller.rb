@@ -1,5 +1,13 @@
 class Influencers::SessionsController < Devise::SessionsController
 # before_action :configure_sign_in_params, only: [:create]
+after_action :prepare_intercom_shutdown, only: [:destroy]
+
+# Your logic here
+
+protected
+def prepare_intercom_shutdown
+  IntercomRails::ShutdownHelper.prepare_intercom_shutdown(session)
+end
 
   # GET /resource/sign_in
   # def new

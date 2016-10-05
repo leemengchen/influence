@@ -18,7 +18,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Home", root_path, class: 'white shadowed link-styling' %></li>
-              <li><a href="#">About<span class="sr-only">(current)</span></a></li>
+              <li><%= link_to "About", about_path, class: 'white shadowed link-styling' %></li>
+            
 
                 <% if current_influencer %>
                   <li><%= link_to current_influencer.email, edit_influencer_registration_path(current_influencer), class: 'white shadowed link-styling' %></li>
