@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :influencersstatic, only: [:index, :show]
   resources :marketersstatic, only: [:index, :show]
   root to: "landing#index"
-  devise_for :marketers, controllers:
+  devise_for :marketers, controllers: 
   {
     sessions: 'marketers/sessions',
     registrations: 'marketers/registrations',
