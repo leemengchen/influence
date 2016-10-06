@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161006022803) do
+ActiveRecord::Schema.define(version: 20161006050319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20161006022803) do
     t.integer  "marketer_id"
     t.string   "industry"
     t.float    "budget"
+    t.boolean  "is_featured"
   end
 
   create_table "marketers", force: :cascade do |t|

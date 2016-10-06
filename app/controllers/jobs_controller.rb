@@ -15,6 +15,7 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @jobs = Job.all
     @job = Job.find_by(id: params[:id])
   end
 
