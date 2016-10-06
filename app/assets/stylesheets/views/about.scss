@@ -10,9 +10,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  opacity: 0.9;
-  padding-top: 500px;
-
+  opacity: 1;
+  // padding-top: 500px;
+}
 
 .background-aboutme-img {
   // background-image: asset-url("me.jpg");
@@ -32,7 +32,15 @@
 
 .all-content-group {
   flex: 0 0 auto;
-  display: -webkit-inline-box;
+  // display: -webkit-inline-box;
+  display: flex;
+  flex-wrap: wrap;
+  // max-width: 1200px;
+  // margin: 50px auto;
+  align-items: center;
+  justify-content: center;
+  // padding: 50px;
+
 }
 
 // ul li{
@@ -72,6 +80,14 @@ h2 {
   position: relative;
 }
 
+.background-icon-tevan {
+  padding-right:20px;
+}
+
+.background-icon-nik {
+  padding-right: 20px;
+}
+
 .icon {
   flex:0 0 280px;
   margin: 20px 25px;
@@ -79,7 +95,15 @@ h2 {
   display:inline;
 }
 
-.just-content {
+.just-content{
   padding-top: 20px;
+  font-family: monospace;
+  color:white;
+  text-shadow: 2px 2px 2px #000000;
 }
+
+.background2 {
+  // display: flex;
+  padding-right: 100px;
+  padding-left: 100px;
 }
