@@ -1,0 +1,5 @@
+<%= form_for([@job, @job.comments.build]) do |f| %>
+	<%= f.text_field :name, class: "form-control style_2", type: "text", placeholder: "Enter name"%><br>
+	<%= f.text_area :body, class: "form-control style_2", style: "height:150px;", placeholder: "Message" %><br>
+	<%= f.submit class: "btn_1", value: "Post Comment" %>
+<% end %>

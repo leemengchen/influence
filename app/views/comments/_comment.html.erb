@@ -1,0 +1,12 @@
+<li>
+  <div class="avatar"><a href="#"><img src="http://placehold.it/68x68" alt="Image"></a></div>
+
+  <div class="comment_right clearfix">
+    <div class="comment_info">
+      Posted by <a href="#"><%= comment.name %></a><span>|</span><%= time_ago_in_words(comment.created_at) %> Ago<span>|</span>
+    </div>
+    <p>
+      <%= comment.body %>
+    </p>
+  </div>
+</li>

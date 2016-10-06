@@ -104,3 +104,39 @@
 .color-white {
   color: white
 }
+
+#comments {
+	padding:10px 0 0px 0;
+	margin-bottom:15px;
+}
+#comments ul {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#comments ol {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#comments li {
+	padding:0 0 23px 0;
+	list-style:none;
+}
+.avatar {
+	float:left;
+	margin-right:11px;
+
+}
+.avatar img {
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.comment_right {display:table;	}
+.comment_info {padding-bottom:7px;}
+.comment_info span {padding:0 12px;}
+#comments ol li ul li {
+	padding:23px 0 0 30px;
+	margin:0;
+}
