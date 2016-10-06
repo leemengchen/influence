@@ -1,12 +1,23 @@
 <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
-        <div class="signupmodal-container">
-            <<div class="sign-up-button-child">
-                  <%= link_to "Marketers! Sign up Here!", new_marketer_registration_path, method: :get, class: "btn btn-info" %>
-                  <%= link_to "Influencers! Sign up Here!", new_influencer_registration_path, method: :get, class: "btn btn-info" %>
+        <div class="loginmodal-container">
+            <h1>Sign Up</h1><br>
+
+            <div class="text-center">
+              <%= link_to new_marketer_registration_path do %>
+              <button type="button" class="btn btn-primary btn-lg">Marketer</button>
+              <% end %>
             </div>
 
+            <p class="text-center">
+              ------------------------------ or -------------------------------
+            </p>
 
+              <div class="text-center">
+                <%= link_to new_influencer_registration_path do %>
+                <button type="button" class="btn btn-primary btn-lg">Influencer</button>
+                <% end %>
+              </div>
         </div>
     </div>
 </div>
