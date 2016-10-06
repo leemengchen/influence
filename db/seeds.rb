@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+environment_seed_file = File.join(Rails.root, 'db', 'seeds', "#{Rails.env}.rb")
 
 Influencer.create!(
   firstName: "Selena",
@@ -26,6 +27,10 @@ Marketer.create!(
   password: "123456",
   password_confirmation: "123456"
 )
+
+def seed_image(file_name)
+  File.open(File.join(Rails.root, "/app/assets/images/#{file_name}.png"))
+end
 
 # Load jobs
 json_data = File.read("db/jobs.json")

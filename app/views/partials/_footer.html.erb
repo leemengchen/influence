@@ -1,7 +1,14 @@
-<footer class="footer">
-  <div class="Terms">
-    <li><%= link_to "TERMS AND CONDITION", terms_path, class: 'white shadowed link-styling' %></li>
+<footer>
+  <div class="container">
+   <div class="Terms text-center">
+    <li><%= link_to "Terms and Condition", terms_path %></li>
+   </div>
+  <div class="Privacy text-center">
+    <li><%= link_to "Privacy Policy", privacy_path %></li>
   </div>
-  <div class="Privacy">
-    <li><%= link_to "PRIVACY POLICY", privacy_path, class: 'white shadowed link-styling' %></li>
+  <div class="copyright text-center">
+    <p>Copyright © Influence Ltd 2016 </p>
+  </div>
+ </div>
+
 </footer>

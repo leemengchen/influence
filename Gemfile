@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem "intercom-rails"
+gem "figaro"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

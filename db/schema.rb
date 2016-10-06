@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005021254) do
+ActiveRecord::Schema.define(version: 20161006050319) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "name"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "job_id"
+  end
 
   create_table "influencers", force: :cascade do |t|
     t.string   "firstName"
@@ -62,6 +71,7 @@ ActiveRecord::Schema.define(version: 20161005021254) do
     t.integer  "marketer_id"
     t.string   "industry"
     t.float    "budget"
+    t.boolean  "is_featured"
   end
 
   create_table "marketers", force: :cascade do |t|

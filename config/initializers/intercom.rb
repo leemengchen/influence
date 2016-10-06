@@ -1,7 +1,7 @@
 IntercomRails.config do |config|
   # == Intercom app_id
   #
-  config.app_id = ENV["INTERCOM_APP_ID"] || "lohpk5ji"
+  config.app_id = ENV["INTERCOM_APP_ID"] || "ENV.fetch('INTERCOM_APP_ID')"
 
   # == Intercom session_duration
   #
@@ -27,7 +27,6 @@ IntercomRails.config do |config|
   # == Include for logged out Users
   # If set to true, include the Intercom messenger on all pages, regardless of whether
   # The user model class (set below) is present. Only available for Apps on the Acquire plan.
-  config.include_for_logged_out_users = true
   config.include_for_logged_out_users = true
 
   # == User model class

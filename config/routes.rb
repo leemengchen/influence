@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get :privacy, to: 'static_pages#privacy'
   get 'tags/:tag', to: 'jobs#index', as: :tag
 
-  resources :jobs
+  resources :jobs do
+    resources :comments
+  end
   resources :influencersstatic, only: [:index, :show]
   resources :marketersstatic, only: [:index, :show]
   root to: "landing#index"
