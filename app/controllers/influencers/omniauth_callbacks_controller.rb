@@ -10,11 +10,11 @@ class Influencers::OmniauthCallbacksController < Devise::OmniauthCallbacksContro
       @ig_user = Instagram.basic_information(@influencer)
       @ig_media = Instagram.recent_media(@influencer)
 
-
-      @influencer.update_attributes(followers: @ig_user.parsed_response['data']['counts']['followed_by'],
+      binding.pry
+      @influencer.update_columns(followers: @ig_user.parsed_response['data']['counts']['followed_by'],
                                     following: @ig_user.parsed_response['data']['counts']['follows'],
                                     media: @ig_user.parsed_response['data']['counts']['media']
-                                    # recent_media: @get_recent_images
+
                                     )
       set_flash_message(:notice, :success, :kind => "instagram") if is_navigational_format?
     else
@@ -27,9 +27,5 @@ class Influencers::OmniauthCallbacksController < Devise::OmniauthCallbacksContro
     redirect_to root_path
   end
 
-  # def recent_media_from_ig
-  #   @get_recent_images = @ig_media['data'].each do |element|
-  #     element.parsed_response['images']['thumbnail']['url']
-  #   end
-  # end
+
 end
