@@ -23,9 +23,6 @@ class Influencer < ApplicationRecord
         end
       end
 
-      # influencer.followers = auth['data']['counts']['followed_by']
-    end
-  end
 
   def email_required?
     false
