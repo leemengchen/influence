@@ -10,7 +10,6 @@ class Influencer < ApplicationRecord
          :omniauthable, :omniauth_providers => [:instagram]
 
       def self.from_omniauth(auth)
-        binding.pry
         where(provider: auth.provider, uid: auth.uid).first_or_create do |influencer|
         #influencer.email = "" # instagram doesn't send email, so we put an empty string
         influencer.password = Devise.friendly_token[0,20]
