@@ -9,15 +9,15 @@ before_action :configure_account_update_params, only: [:update]
 
   # POST /resource
   def create
-    @influencer = Influencer.new
-
-  if @influencer.save
-      flash[:success] = "You will receive a confirmation email once we reviewed your profile"
-      redirect_to edit_influencer_registration_path
-    else
-      flash[:danger] = "User not successfully added"
-      redirect_to new_influencer_registration_path
-    end
+  #   @influencer = Influencer.new
+  #
+  # if @influencer.save
+  #     flash[:success] = "You will receive a confirmation email once we reviewed your profile"
+  #     redirect_to edit_influencer_registration_path
+  #   else
+  #     flash[:danger] = "User not successfully added"
+  #     redirect_to new_influencer_registration_path
+  #   end
   end
 
   # GET /resource/edit
@@ -29,6 +29,8 @@ before_action :configure_account_update_params, only: [:update]
   def update
     super
   end
+
+
 
   # DELETE /resource
   # def destroy
