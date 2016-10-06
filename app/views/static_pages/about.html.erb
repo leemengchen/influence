@@ -18,7 +18,7 @@
         <div class="background-icon-tevan">
 
          <div class="content-abouttevan">
-         <%= image_tag "me.jpg", class: "background-aboutme-img"%>
+         <%= image_tag "influence.jpg", class: "background-aboutme-img"%>
          </div>
 
            <a href="http://www.twitter.com/tevanraj">
@@ -35,7 +35,7 @@
 
 
             <div class="just-content">
-              <p> The one and only Tevan you can find </p>
+              <p> The one and only Tevan </p>
             </div>
 
 
@@ -46,7 +46,7 @@
         <div class="background-icon-nik">
 
           <div class="content-aboutnik">
-          <%= image_tag "me.jpg", class: "background-aboutme-img"%>
+          <%= image_tag "influence.jpg", class: "background-aboutme-img"%>
           </div>
 
           <a href="http://www.twitter.com">
@@ -62,14 +62,15 @@
          </a>
 
            <div class="just-content">
-             <p> The one and only Tevan you can find </p>
+             <p> The one and only Nik </p>
            </div>
 
+        </div>
 
         <div class="background-icon-mc">
 
           <div class="content-aboutmc">
-          <%= image_tag "me.jpg", class: "background-aboutme-img"%>
+          <%= image_tag "influence.jpg", class: "background-aboutme-img"%>
           </div>
 
           <a href="http://www.twitter.com">
@@ -84,13 +85,53 @@
             </div>
           </a>
 
-            <div class="just-content">
-              <p> The one and only Tevan you can find </p>
-            </div>
-          </div>  
+          <div class="just-content">
+            <p> The one and only MC </p>
+          </div>
         </div>
+
+      </div>
     </div>
   </div>
+</div>
+
+<div class="background2">
+  <html>
+  <head>
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        /*background-color: grey;*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="map text-center">
+    <h3>Our Location</h3>
+  </div>
+
+    <div id="map"></div>
+    <script>
+
+      function initMap() {
+        var uluru = {lat: 2.908888, lng: 101.654812};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVt7THMO9Ltt4rPnzYrAYaTRP0lGRlSxY&callback=initMap">
+    </script>
+  </body>
+</html>
 </div>
 
 
