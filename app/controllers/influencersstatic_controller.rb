@@ -9,8 +9,8 @@ class InfluencersstaticController < ApplicationController
     # Influencer.find(params[:id])
     @ig_media = Instagram.recent_media(@influencer)
 
-    @get_recent_images = @ig_media['data'].each do
-      |element| puts element['images']['thumbnail']['url']
-    end
+    # @get_recent_images = @ig_media['data'].each do
+    #   |element| puts element['images']['thumbnail']['url']
+    # end
   end
 end
