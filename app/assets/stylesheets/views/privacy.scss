@@ -1,5 +1,21 @@
-.privacy {
-  text-align: center;
-  font-size: 20px;
-  text-shadow: 1px;
+.main-privacy {
+  background-image: asset-url("privacy.jpg");
+  height: calc(100vh - 52px);
+  width: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-left: 350px;
 }
+
+.privacy {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+  h5{
+    font-size: 60px;
+    font-family: monospace;
+  }
