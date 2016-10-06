@@ -51,7 +51,7 @@
       <div class="row">
       <% @ig_media['data'].each do |p| %>
         <div class="col-md-4 item">
-        <%= image_tag(p['images']['standard_resolution']['url']) %>
+        <%= image_tag p['images']['standard_resolution']['url'], class: 'img-responsive center-block' %>
         </div>
       <% end %>
       </div>
