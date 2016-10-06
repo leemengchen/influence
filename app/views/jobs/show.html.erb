@@ -27,18 +27,18 @@
                 <img src="<%= @job.background_image %>" class="img-resize img-responsive">
                 <hr>
 
-
                 <p class="lead"><%= @job.description %></p>
 
                 <br/>
                 <br/>
                 <hr>
                 <div id="comments">
-                  <h4><%= @job.comments.count %> Comments</h4>
-                  <%= render @job.comments %>
+                    <h4><%= @job.comments.count %>
+                        Comments</h4>
+                    <%= render @job.comments %>
 
-                  <h4>Leave a comment</h4>
-                  <%= render "comments/form" %>
+                    <h4>Leave a comment</h4>
+                    <%= render "comments/form" %>
                 </div>
                 <!-- the comment box -->
 
@@ -53,11 +53,11 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                              <% @job.tag_list.each do |tag| %>
-                              <li>
-                                <%= link_to tag, tag_path(tag), class: "badge badge-info" %>
-                              </li>
-                              <% end %>
+                                <% @job.tag_list.each do |tag| %>
+                                <li>
+                                    <%= link_to tag, tag_path(tag), class: "badge badge-info" %>
+                                </li>
+                                <% end %>
                             </ul>
                         </div>
                         <!-- <div class="col-lg-6">
@@ -91,12 +91,12 @@
                     <h4>
                         <i class="fa fa-fire"></i>
                         Requirements</h4>
-                    <ul id="nameid" >
-                      <script type="text/javascript">
+                    <ul id="nameid">
+                        <script type="text/javascript">
                             var mystring = '<%= @job.requirements %>';
-                            mystring = '<li>' + mystring.replace(/##/gi,'</li><li>') + '</li>';
+                            mystring = '<li>' + mystring.replace(/##/gi, '</li><li>') + '</li>';
                             $('#nameid').html(mystring);
-                      </script>
+                        </script>
                     </ul>
                 </div>
                 <!-- /well -->
@@ -107,7 +107,8 @@
                         <i class="fa fa-book"></i>
                         Featured Job:</h4>
                     <div class="row">
-
+                        <% @jobs.each do |job| %>
+                        <% if job.is_featured == true %>
                         <div class="col-lg-12">
                             <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                                 <p style="text-align:center; margin-top:20px;">
@@ -116,74 +117,41 @@
                                 <div class="caption">
                                     <div class="blur"></div>
                                     <div class="caption-text">
-                                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Moovby Sdn Bhd</h3>
-                                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                                        <a class=" btn btn-default" href="#">
-                                            <i class="fa fa-plus"></i>
-                                            INFO</span>
-                                    </a>
+                                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;"><%= job.companyName %></h3>
+                                        <p><%= job.title %></p>
+                                        <button class="btn btn-default"><%= link_to "View Job", job_path(job.id)%></button>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                            <p style="text-align:center; margin-top:20px;">
-                                <img src="http://placehold.it/500x330" class="img-responsive" alt="">
-                            </p>
-                            <div class="caption">
-                                <div class="blur"></div>
-                                <div class="caption-text">
-                                    <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Media Prima Sdn Bhd</h3>
-                                    <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                                    <a class=" btn btn-default" href="#">
-                                        <i class="fa fa-plus"></i>
-                                        INFO</span>
-                                </a>
-
-                            </div>
-                        </div>
+                        <% end %>
+                        <% end %>
                     </div>
 
                 </div>
+                <!-- /well -->
             </div>
-
         </div>
-        <!-- /well -->
-    </div>
-</div>
 
-<hr>
+        <hr>
 
-<!-- <footer>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="col-lg-3 col-md-6">
-                <div class="container">
 
-                    <hr>
-                    <p>Copyright © Influencer |
-                        <a href="">Privacy Policy</a>
-                        |
-                        <a href="">Terms of Use</a>
-                    </p>
 
-                </footer> -->
 
-            </div>
-            <!-- /.container -->
 
-            <!-- JavaScript -->
-            <script src="js/jquery-1.10.2.js"></script>
-            <script src="js/bootstrap.js"></script>
+
+                    </div>
+                    <!-- /.container -->
+
+                    <!-- JavaScript -->
+                    <script src="js/jquery-1.10.2.js"></script>
+                    <script src="js/bootstrap.js"></script>
+
+                </html>
+                <!-- ootstrap.js"></script> -->
+
+            </html>
+            <!-- ootstrap.js"></script> -->
 
         </html>
-        <!-- ootstrap.js"></script> -->
-
-</html>
-<!-- ootstrap.js"></script> -->
-
-</html>
