@@ -10,6 +10,7 @@ class JobsController < ApplicationController
     else
       @jobs = Job.all.order('id ASC')
     end
+    @jobs = Job.page(params[ :page]).per(6)
   end
 
   # GET /jobs/1
