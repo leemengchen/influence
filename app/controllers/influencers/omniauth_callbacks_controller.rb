@@ -10,7 +10,7 @@ class Influencers::OmniauthCallbacksController < Devise::OmniauthCallbacksContro
       @ig_user = Instagram.basic_information(@influencer)
       @ig_media = Instagram.recent_media(@influencer)
 
-      binding.pry
+  
       @influencer.update_columns(followers: @ig_user.parsed_response['data']['counts']['followed_by'],
                                     following: @ig_user.parsed_response['data']['counts']['follows'],
                                     media: @ig_user.parsed_response['data']['counts']['media']
