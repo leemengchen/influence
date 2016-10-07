@@ -2,17 +2,10 @@
 
     <div class="job-big-container">
         <% if @jobs.any? %>
-        <!-- <div class="well well-sm">
-            <strong>Category Title</strong>
-            <!-- <div class="btn-group">
-                <a href="#" id="list" class="btn btn-default btn-sm">
-                    <span class="glyphicon glyphicon-th-list"></span>List</a>
-                <a href="#" id="grid" class="btn btn-default btn-sm">
-                    <span class="glyphicon glyphicon-th"></span>Grid</a>
-            </div> -->
-    </div>
 
-        <% @jobs.each do |job| %>
+    </div>
+    <div class="container-fluid">
+      <% @jobs.each do |job| %>
         <div class="item  col-xs-4 col-lg-4">
             <div class="thumbnail">
                 <img class="group list-group-image" src=<%= job.background_image %> alt=""/>
@@ -34,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <% end %>
+      <% end %>
 
     <% else %>
         <div class="nothing text-center">
@@ -43,6 +36,7 @@
             </h3>
           </div>
         <% end %>
+    </div>
     <!-- </div> -->
 
     <div class="pagination-job">
