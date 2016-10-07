@@ -6,17 +6,19 @@ Rails.application.routes.draw do
   get :privacy, to: 'static_pages#privacy'
   get 'tags/:tag', to: 'jobs#index', as: :tag
 
+
   resources :jobs do
     resources :comments
   end
   resources :influencersstatic, only: [:index, :show]
   resources :marketersstatic, only: [:index, :show]
+  resources :dashboard, only: [:index]
   root to: "landing#index"
   devise_for :marketers, controllers:
   {
     sessions: 'marketers/sessions',
     registrations: 'marketers/registrations',
-    passwords: 'marketers/passwords'
+    passwords: 'marketers/passwords',
   }
   devise_for :influencers, controllers:
   {
