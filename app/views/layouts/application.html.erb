@@ -9,15 +9,17 @@
   </head>
 
   <body>
-    <div id="header">
-      <%= render partial: 'partials/header' %>
-    </div>
+    <% unless controller_name == "dashboard" %>
+      <div id="header">
+        <%= render partial: 'partials/header' %>
+      </div>
+    <% end %>
       <%= render partial: "partials/flash_messages" %>
       <%= render partial: 'partials/login_influencer' %>
       <%= render partial: 'partials/login_marketer' %>
       <%= render partial: 'partials/sign_up' %>
     <%= yield %>
-    
+
   </body>
 
 

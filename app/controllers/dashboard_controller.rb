@@ -1,5 +1,9 @@
 class DashboardController < ApplicationController
 
-  def index
+
+before_action :require_marketer
+
+  def show
+    @marketer = current_marketer
   end
 end

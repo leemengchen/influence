@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :marketersstatic, only: [:index, :show]
   resources :dashboard, only: [:index]
   root to: "landing#index"
+  resources :dashboard, only: [:show]
   devise_for :marketers, controllers:
   {
     sessions: 'marketers/sessions',
@@ -28,9 +29,12 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'influencers/omniauth_callbacks'
   }
 
+  # marketer folder means nothing, so namespace to configure the folder name and resources the filename
+
+
 
   devise_scope :influencer do
-  delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+    delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
