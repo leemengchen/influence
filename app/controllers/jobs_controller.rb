@@ -18,7 +18,6 @@ class JobsController < ApplicationController
   def show
     @jobs = Job.all
     @job = Job.find_by(id: params[:id])
-    binding.pry
   end
 
   # GET /jobs/new
