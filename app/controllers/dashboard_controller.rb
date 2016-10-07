@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
 
+
 before_action :require_marketer
 
   def show

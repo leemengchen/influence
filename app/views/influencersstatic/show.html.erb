@@ -1,9 +1,9 @@
-<div class="influencersstatic">
+<div class="influencers">
 
   <div class="back-button">
     <%= link_to 'Back', influencersstatic_index_path , class: "btn btn-danger "%>
   </div>
-  </div>
+
   <div class="individual-influencer-head text-center">
     <h1> <%= @influencer.nickname %> </h1>
     <br>
@@ -47,13 +47,21 @@
       </div>
     </div>
 
-    <div class="container">
+
+    <br>
+
+    <div class="influencer-recent-media-head text-center">
+      <h3> Influncer Recent Photos </h3>
+    </div>
+
+    <div class="container-influencer">
       <div class="row">
       <% @ig_media['data'].each do |p| %>
         <div class="col-md-4 item">
-        <%= image_tag p['images']['standard_resolution']['url'], class: 'img-responsive center-block' %>
+        <%= image_tag p['images']['standard_resolution']['url'], class: 'hello img-responsive center-block' %>
         </div>
       <% end %>
       </div>
     </div>
+
 </div>
