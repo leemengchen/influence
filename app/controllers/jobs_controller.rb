@@ -79,7 +79,7 @@ class JobsController < ApplicationController
 
     #why when i put this line , current marketer will automatically sign out
     # def current_marketer
-    #   return unless session[:id]
+    #   return unless session[:id] 
     #   @current_marketer ||= Marketer.find_by(session[:id])
     #
     # end
@@ -93,7 +93,7 @@ class JobsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
 
-      params.require(:job).permit(:title, :description, :background_image, :companyId, :companyName, :budget, :industry, :requirements, :skills, :due, :viewCount, :tag_list)
+      params.require(:job).permit(:title, :description, :background_image, :companyId, :companyName,:amountpaid, :budget, :industry, :requirements, :skills, :due, :viewCount, :tag_list)
 
     end
 end

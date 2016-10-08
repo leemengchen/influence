@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
 
 
+  get 'transactions/new'
+
   get :about, to: 'static_pages#about'
   get :terms, to: 'static_pages#terms'
   get :privacy, to: 'static_pages#privacy'
   get 'tags/:tag', to: 'jobs#index', as: :tag
+
+
+  
+  resources :transactions, only: [:new, :create]
 
 
   resources :jobs do
