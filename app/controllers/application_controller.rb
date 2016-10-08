@@ -67,10 +67,20 @@ class ApplicationController < ActionController::Base
     @devise_mapping ||= Devise.mappings[:marketer]
   end
 
+ private
+  helper_method :current_marketer
+
+  def authenticate!
+    unless current_marketer
+      redirect_to root_path
+      flash[:danger] = "You need to login first"
+    end
+  end
+
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:igUsername, :firstName, :lastName, :companyName, :name, :budget, :country])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:igUsername, :firstName, :lastName, :companyName, :name, :budget, :country, :amountpaid])
   end
 
 

@@ -31,6 +31,7 @@ gem 'kaminari'
 gem 'devise'
 gem "intercom-rails"
 gem "figaro"
+gem 'braintree', '~> 2.33.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
