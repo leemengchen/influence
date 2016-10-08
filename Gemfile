@@ -44,6 +44,7 @@ gem 'omniauth-instagram'
 gem 'wicked'
 gem 'httparty'
 gem 'acts-as-taggable-on', '~> 4.0'
+gem 'fog-aws'
 
 
 
